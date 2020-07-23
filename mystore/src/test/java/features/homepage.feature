@@ -1,3 +1,4 @@
+@check
 Feature: Homepage
 
 
@@ -6,7 +7,7 @@ Scenario: Login with a valid username and password
 	And I enter "hunky123!" as my password
 	And I click login button after entering login details
     
-@check    
+ 
 Scenario Outline: Login with a valid username and invalid password
 	Given I enter "<Username>" as my username
     And I enter "<Password>" as my password
