@@ -7,22 +7,22 @@ import org.openqa.selenium.By;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import pages.DriverFactory;
+import utils.DriverFactory;
 
 
 public class HomePageSteps extends DriverFactory {
 	
-	@Given("^I enter \"([^\"]*)\" as my username$")
+	@Given("^I enter \"([^\"]*)\" in the username field$")
 	public void i_enter_login_username(String username) throws IOException, InterruptedException {
 		homePage.enterUsername(username);
 		Thread.sleep(1000);
 	}
-	@Given("^I enter \"([^\"]*)\" as my password$")
+	@Given("^I enter \"([^\"]*)\" in the password field$")
 	public void i_enter_login_password(String password) throws IOException, InterruptedException {
 		homePage.enterPassword(password);
 		Thread.sleep(1000);
 	}
-	@Given("^I click login button after entering login details$")
+	@Given("^I click the login button after entering login details$")
 	public void click_login_button() throws IOException, InterruptedException {
 		homePage.pressLoginButton();
 		Thread.sleep(1000);
